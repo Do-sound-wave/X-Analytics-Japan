@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #1DA1F2; /* Xのブランドカラーをベースとした青 */
+    --text-color: #333;
+    --border-color: #ddd;
+    --background-color: #f4f7f6;
+    --box-bg-color: #fff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* 全体のリセットとフォント設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ログインコンテナ */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ヘッダー */
+.login-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* ログインボックス */
+.login-box {
+    background: var(--box-bg-color);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* 入力グループ */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* アイコンのスペースを確保 */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1rem;
+}
+
+/* パスワード表示トグル */
+.password-group .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.password-group .toggle-password:hover {
+    color: var(--text-color);
+}
+
+
+/* オプション（チェックボックスと忘れましたリンク） */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.forgot-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover {
+    opacity: 0.8;
+}
+
+/* カスタムチェックボックスのスタイル (簡略化) */
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* ログインボタン */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background-color: #167fc7; /* 少し濃い青 */
+}
+
+/* 区切り線 */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* OAuthボタン (Xでログイン) */
+.oauth-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #14171A; /* Xのダークカラー */
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.oauth-btn .fab {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.oauth-btn:hover {
+    background-color: #14171A;
+}
+
+/* 新規登録リンク */
+.signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
